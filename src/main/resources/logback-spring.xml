@@ -7,25 +7,25 @@
             </pattern>
         </layout>
     </appender>
-    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>DENY</onMatch>
-            <onMismatch>ACCEPT</onMismatch>
-        </filter>
-        <encoder>
-            <pattern>
-                %d{MM:dd-hh:mm} - %msg%n
-            </pattern>
-        </encoder>
-        <!-- 滚动策略 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 路径 -->
-            <fileNamePattern>g:/info.%d.log</fileNamePattern>
-        </rollingPolicy>
-    </appender>
-    <root lever="info">
-        <appender-ref ref="consoleLog"/>
-        <appender-ref ref="fileInfoLog"/>
+    <!--<appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+            <!--<level>ERROR</level>-->
+            <!--<onMatch>DENY</onMatch>-->
+            <!--<onMismatch>ACCEPT</onMismatch>-->
+        <!--</filter>-->
+        <!--<encoder>-->
+            <!--<pattern>-->
+                <!--%d{MM:dd-hh:mm} - %msg%n-->
+            <!--</pattern>-->
+        <!--</encoder>-->
+        <!--&lt;!&ndash; 滚动策略 &ndash;&gt;-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; 路径 &ndash;&gt;-->
+            <!--<fileNamePattern>g:/info.%d.log</fileNamePattern>-->
+        <!--</rollingPolicy>-->
+    <!--</appender>-->
+    <root lever="warn">
+        <!--<appender-ref ref="consoleLog"/>-->
+        <!--<appender-ref ref="fileInfoLog"/>-->
     </root>
 </configuration>

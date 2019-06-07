@@ -1,4 +1,4 @@
-package com.livejq.mealtime;
+package com.livejq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
